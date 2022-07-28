@@ -127,6 +127,68 @@ class ViewController: UIViewController {
         print("Examples of potential nil are: \(whatNumber ?? 0), \(exampleNil ?? "Blank"), \(serverResponseCode ?? 0)")
         // In this print statement, we use a bunch of potential optionals, but the compiler does not like it because the answer could be blank and not user friendly. To fix this problem, we use ?? to provide a default value if the response is nil.
         
+        if whatNumber != nil {
+            print("whatNumber contains a value.")
+        }
+        
+        if whatNumber != nil {
+            print("whatNumber has a value of \(whatNumber!)")
+        }
+        
+        if let actualNumber = Int(couldBeNumber) {
+            print("The string \"\(couldBeNumber)\" has an integer value of \(actualNumber)")
+        } else {
+            print("The string \"\(couldBeNumber)\" couldn't be converted to an integer")
+        }
+        
+        if let firstNumber = Int("8"), let secondNumber = Int("64"), firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+        
+        if let firstNumber = Int("8") {
+            if let secondNumber = Int("64") {
+                if firstNumber < secondNumber && secondNumber < 100 {
+                    print("\(firstNumber) < \(secondNumber) < 100")
+                }
+            }
+        }
+    }
+    
+    func unwrappingOptionals() {
+        // The example below is an optional string which is then forcefully unwrapped by forcedString using an ! symbol
+        let potentialString: String? = "An optional string"
+        let forcedString: String = potentialString!
+        
+        // The example below is similar to the above, except this time the String is unwrapped from the get go and thus does not need a ! when implicitString uses it unlike forcedString did.
+        let assumedString: String! = "An implicitly unwrapped optional string"
+        let implicitString: String = assumedString
+        
+        // Here the type of optionalString is recognized as String? and assumedString isn't force unwrapped.
+        let optionalString = assumedString
+        
+        if assumedString != nil {
+            print(assumedString!)
+        }
+        
+        if let definiteString = assumedString {
+            print(definiteString)
+        }
+    }
+    
+    func letTheErrorsFlow() throws {
+        // The sole purpose of this function is to potentially throw an error during runtime which should be handled with a do statement.
+    }
+    
+    func catchError() {
+        do {
+            try letTheErrorsFlow()
+            unwrappingOptionals()
+        } catch {
+            tuples()
+        }
+    }
+    
+    func debuggingAssertions() {
         
     }
 

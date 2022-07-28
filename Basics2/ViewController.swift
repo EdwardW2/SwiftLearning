@@ -180,6 +180,9 @@ class ViewController: UIViewController {
     }
     
     func catchError() {
+        // Do statements are required in order to catch errors. Do statements come with the use of both Try and Catch clauses which each serve a purpose.
+        // Try is to try the function you wish to find errors for. Catch is to catch the errors and should also go in order of specific to generic.
+        // Without this, the app will crash when an error is encountered, which is bad UX.
         do {
             try letTheErrorsFlow()
             unwrappingOptionals()
@@ -189,7 +192,20 @@ class ViewController: UIViewController {
     }
     
     func debuggingAssertions() {
+        // Assertions are around to either debug or ensure that the needs of your method, function or program are met. Example below is to make sure that a person can never input an age below 0, it must be equal or above zero to pass.
+        let age = -3
+        assert(age >= 0, "A person's age can't be less than zero.")
         
+        if age > 10 {
+            print("You can ride the rollecoaster or ferris wheel.")
+        } else if age >= 0 {
+            print("You can only ride the ferris wheel. Too young to go on the coaster.")
+        } else {
+            // Assertion Failures are around to provide a message if it is hit, providing a assertion failure warning in your debugging and the message you can customize as to why it failed.
+            assertionFailure("A person's age can't be les than zero")
+        }
+        
+        // Preconditions also exist. They provide true or false answers which ensure that the condition MUST BE MET before the code will continue. You pass an expression which checks for true or false and then pass a message so if it fails it can present why it failed.
     }
 
 }

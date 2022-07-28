@@ -207,6 +207,104 @@ class ViewController: UIViewController {
         
         // Preconditions also exist. They provide true or false answers which ensure that the condition MUST BE MET before the code will continue. You pass an expression which checks for true or false and then pass a message so if it fails it can present why it failed.
     }
+    
+    func assignmentOperators() {
+        // The = sign here is known as an assignment operator. First it assigns x as 10, y as 140, but then assigns the variable of y to x making y 10.
+        let x = 10
+        var y = 140
+        y = x
+        
+        // Also works with tuples where you can take 2 values and assign them to another 2 values. So a is assigned as 1 and b is assigned as 2.
+        let (a, b) = (1, 2)
+        
+        if x == y {
+            // Do nothing, just an example.
+        }
+        
+        print("Here is what x is: \(x) and y is also \(y). a should be \(a) and b should be \(b)")
+    }
+    
+    func arithmeticOperators() {
+        /*
+         There is a few Arithmetic Operators which are:
+         + is addition
+         - is subtraction
+         * is multiplication
+         / is division
+         % is remainder
+         */
+        print(1 + 2)
+        print(5 - 3)
+        print(2 * 3)
+        print(10.0 / 2.5)
+        print(9 % 4)
+        
+        // Also possible with negative numbers for example:
+        print(-9 % 4)
+        
+        // It also supports strings
+        print("Hello, " + "world")
+        
+        // There is also Unary Minus and Unary Plus operators. Unary minus is prefixed by a - symbol and Unary plus is prefixed with a +
+        let four = 4
+        let minusFour = -four
+        let plusFour = -minusFour
+        
+        let minusSix = -6
+        let alsoMinusSix = +minusSix
+    }
+    
+    func compoundAssignmentOperators() {
+        // Compound assignment operators means you take the assignment operator of = with another operator such as a +
+        // The example below creates variable x with a assigned value of 1 and then uses += on the next like to add a 2
+        // This is short for x = x + 2
+        var x = 1
+        x += 2
+    }
+    
+    func comparisonOperators() {
+        /*
+         There is also comparison Operators which have a few uses:
+         == simply means equal to. E.g is a == b (Is a equal to value b)
+         != not equal to
+         > greater than
+         < less than
+         >= Greater than or equal to
+         <= Less than or equal to
+         */
+        // Here is some examples
+        print(10 == 10)
+        print(2 != 10)
+        print(2 > 1)
+        print(1 < 2)
+        print(1 >= 1)
+        print(2 <= 1)
+        
+        let nameOfDog = "Sherlock"
+        if nameOfDog == "Sherlock" {
+            print("Hello, Sherlock")
+        } else {
+            print("I'm sorry \(nameOfDog), but you are not my dog.")
+        }
+        
+        // It is worth noting that comparison operators won't always work. For example the < and > operators will error if you attempt to compare any form of boolean value. Because true or false is neither greater or less than each other.
+    }
+    
+    func ternaryConditionalOperator() {
+        
+    }
+    
+    func nilCoalescingOperator() {
+        
+    }
+    
+    func rangeOperators() {
+        
+    }
+    
+    func logicalOperations() {
+        
+    }
 
 }
 

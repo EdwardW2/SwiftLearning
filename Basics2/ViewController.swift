@@ -33,6 +33,17 @@ class ViewController: UIViewController {
         typeAliasAndBoolean()
         tuples()
         funWithOptionals()
+        unwrappingOptionals()
+        catchError()
+        debuggingAssertions()
+        assignmentOperators()
+        arithmeticOperators()
+        compoundAssignmentOperators()
+        comparisonOperators()
+        ternaryConditionalOperator()
+        rangeOperators()
+        nilCoalescingOperator()
+        logicalOperations()
     }
 
     func aHelloFunction() {
@@ -291,19 +302,110 @@ class ViewController: UIViewController {
     }
     
     func ternaryConditionalOperator() {
+        // Ternary Operators are special operators which acts like a mini if statement such as question ? answer1 : answer2.
+        // The question is the IF part of the statement and answer1 is the first part, with answer2 being within the else
+        // Essentially the question is either true or false and if true answer1 is provided and if false answer2 is provided.
         
+        let pageHeight = 100
+        let hasHeader = true
+        let rowHeight = pageHeight + (hasHeader ? 50 : 20)
+        
+        /*
+         Without the above, you would end up writing something similar to this:
+         let pageHeight = 100
+         let hasHeader = true
+         let rowHeight: Int
+         if hasHeader {
+            rowHeight = pageHeight + 50
+         } else {
+            rowHeight = pageHeight + 20
+         }
+         */
     }
     
     func nilCoalescingOperator() {
+        // Nil-coalescing operators uses the ?? symbol and is essentially following a pattern of (a ?? b)
+        // It unwraps an optional value of a if a value is contained and not nil or if a is nil, then b is returned as a default
+        // a and b must be of the same type and a must always be optional
         
+        let myFavouriteColour = "Navy Blue"
+        var userDefinedColorName: String?
+        
+        var colorToUse = userDefinedColorName ?? myFavouriteColour
     }
     
     func rangeOperators() {
+        /*
+         There are 3 forms of range operators which are:
+         Closed range operators that defines a range from a to b, while including both values. a must not be greater than b
+         Half-open range operators that also ranges from a to b but this time does not include b as a value. If a is equal to b, the range will be empty
+         One-sided range operators act similar to the ones above, however it only performs a range on one side. Lets say you want anything past the index of 3 for example. That would now provide all ranges beyond index 3 thus why it is called 1 sided.
+         */
         
+        // Here is an example of a closed range operator:
+        for index in 1...5 {
+            print("\(index) times 5 is \(index * 5)")
+        }
+        
+        // Here is an example of a Half-Open operator:
+        let numbers = [10, 20, 30, 40, 50, 60]
+        let count = numbers.count
+        for i in 0..<count {
+            print("Numbers \(i+1) is \(numbers[1])")
+        }
+        
+        // Finally, here is an example of a one-sided operator:
+        for number in numbers[2...] {
+            print(number)
+        }
+        
+        for number in numbers[...2] {
+            print(number)
+        }
     }
     
     func logicalOperations() {
+        /*
+         There are 3 types of logical operations in Swift which are as follows:
+         Logical NOT shown with !. It is prefixed at the front of text and is capable of inverting true and false answers.
+         Logical AND using a && is capable of creating a expression where 2 or more conditions must be met
+         Logical OR using || which is capable of creating a expression where 1 of 2 conditions must be met
+         Examples are below
+         */
         
+        // This is an example of a Logical NOT operator:
+        // canUserOpenDoor in the if statement is looking for true, but since the ! is there it reads if canUserOpenDoor is false then return:
+        let canUserOpenDoor = false
+        if !canUserOpenDoor {
+            print("Access Denied")
+        }
+        
+        // Logical AND example:
+        // Below is access denied as the user fails to meet the second conditions of the Retina Scan.
+        let doorKeyInPossession = true
+        let passedRetinaScan = false
+        if doorKeyInPossession && passedRetinaScan {
+            print("Welcome")
+        } else {
+            print("Access Denied")
+        }
+        
+        // Logical OR example:
+        // The outcome of this one is Welcome because while the key is false, they do have the override password and thus are allowed entry.
+        let possessionOfCode = false
+        let knowsOverridePassword = true
+        if possessionOfCode || knowsOverridePassword {
+            print("Welcome")
+        } else {
+            print("Access Denied.")
+        }
+        
+        // You can also combine operators as such (Note: You should sometimes include explicit () around parts of your statement like below):
+        if (doorKeyInPossession && passedRetinaScan) || possessionOfCode || knowsOverridePassword {
+            print("Welcome")
+        } else {
+            print("Access Denied")
+        }
     }
 
 }

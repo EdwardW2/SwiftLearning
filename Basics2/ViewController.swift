@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let stringsLessons: StringsAndCharacters = StringsAndCharacters()
+    
     let randomConstant = 5
     // Let is to always be used on values you know will never change.
     
@@ -44,6 +46,7 @@ class ViewController: UIViewController {
         rangeOperators()
         nilCoalescingOperator()
         logicalOperations()
+        stringsLessons.testMethod()
     }
 
     func aHelloFunction() {
@@ -152,6 +155,10 @@ class ViewController: UIViewController {
             print("The string \"\(couldBeNumber)\" couldn't be converted to an integer")
         }
         
+        guard let actualNumber2 = Int(couldBeNumber) else {
+            return
+        }
+        
         if let firstNumber = Int("8"), let secondNumber = Int("64"), firstNumber < secondNumber && secondNumber < 100 {
             print("\(firstNumber) < \(secondNumber) < 100")
         }
@@ -205,7 +212,7 @@ class ViewController: UIViewController {
     func debuggingAssertions() {
         // Assertions are around to either debug or ensure that the needs of your method, function or program are met. Example below is to make sure that a person can never input an age below 0, it must be equal or above zero to pass.
         let age = -3
-        assert(age >= 0, "A person's age can't be less than zero.")
+//        assert(age >= 0, "A person's age can't be less than zero.")
         
         if age > 10 {
             print("You can ride the rollecoaster or ferris wheel.")
@@ -213,7 +220,8 @@ class ViewController: UIViewController {
             print("You can only ride the ferris wheel. Too young to go on the coaster.")
         } else {
             // Assertion Failures are around to provide a message if it is hit, providing a assertion failure warning in your debugging and the message you can customize as to why it failed.
-            assertionFailure("A person's age can't be les than zero")
+//            assertionFailure("A person's age can't be les than zero")
+            return
         }
         
         // Preconditions also exist. They provide true or false answers which ensure that the condition MUST BE MET before the code will continue. You pass an expression which checks for true or false and then pass a message so if it fails it can present why it failed.
@@ -351,7 +359,7 @@ class ViewController: UIViewController {
         let numbers = [10, 20, 30, 40, 50, 60]
         let count = numbers.count
         for i in 0..<count {
-            print("Numbers \(i+1) is \(numbers[1])")
+            print("Numbers \(i+1) is \(numbers[i])")
         }
         
         // Finally, here is an example of a one-sided operator:

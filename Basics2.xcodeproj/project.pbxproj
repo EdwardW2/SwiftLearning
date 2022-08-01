@@ -16,6 +16,8 @@
 		2330CE282892704F00CA95BF /* Basics2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330CE272892704F00CA95BF /* Basics2Tests.swift */; };
 		2330CE322892704F00CA95BF /* Basics2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330CE312892704F00CA95BF /* Basics2UITests.swift */; };
 		2330CE342892704F00CA95BF /* Basics2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330CE332892704F00CA95BF /* Basics2UITestsLaunchTests.swift */; };
+		2330CE412893E26E00CA95BF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330CE402893E26E00CA95BF /* Strings.swift */; };
+		2330CE432897B94400CA95BF /* IfLetVersusGuardLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330CE422897B94400CA95BF /* IfLetVersusGuardLet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2330CE2D2892704F00CA95BF /* Basics2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Basics2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2330CE312892704F00CA95BF /* Basics2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics2UITests.swift; sourceTree = "<group>"; };
 		2330CE332892704F00CA95BF /* Basics2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2330CE402893E26E00CA95BF /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		2330CE422897B94400CA95BF /* IfLetVersusGuardLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfLetVersusGuardLet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				2330CE192892704F00CA95BF /* Assets.xcassets */,
 				2330CE1B2892704F00CA95BF /* LaunchScreen.storyboard */,
 				2330CE1E2892704F00CA95BF /* Info.plist */,
+				2330CE402893E26E00CA95BF /* Strings.swift */,
+				2330CE422897B94400CA95BF /* IfLetVersusGuardLet.swift */,
 			);
 			path = Basics2;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			files = (
 				2330CE152892704C00CA95BF /* ViewController.swift in Sources */,
 				2330CE112892704C00CA95BF /* AppDelegate.swift in Sources */,
+				2330CE432897B94400CA95BF /* IfLetVersusGuardLet.swift in Sources */,
+				2330CE412893E26E00CA95BF /* Strings.swift in Sources */,
 				2330CE132892704C00CA95BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

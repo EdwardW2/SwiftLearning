@@ -46,7 +46,17 @@ class ViewController: UIViewController {
         rangeOperators()
         nilCoalescingOperator()
         logicalOperations()
-        stringsLessons.testMethod()
+        stringsLessons.stringLiteral()
+        stringsLessons.specialCharacters()
+        stringsLessons.extendedStringDelimiters()
+        stringsLessons.emptyStringMethod()
+        stringsLessons.stringMutability()
+        stringsLessons.workingWithCharacters()
+        stringsLessons.concatenatingStringsAndCharacters()
+        stringsLessons.stringInterpolation()
+        stringsLessons.graphemeClusters()
+        stringsLessons.countingCharacters()
+        stringsLessons.stringAndCharacterEquality()
     }
 
     func aHelloFunction() {

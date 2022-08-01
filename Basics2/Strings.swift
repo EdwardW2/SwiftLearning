@@ -9,10 +9,6 @@ import Foundation
 
 class StringsAndCharacters {
     
-    func testMethod() {
-        
-    }
-    
     func stringLiteral() {
         // String Literal is a string value with double quotation marks
         let someString = "This is a string literal"
@@ -203,5 +199,76 @@ class StringsAndCharacters {
         let regionalIndictatorForUS: Character = "\u{1F1FA}\u{1F1F8}"
         
         print(regionalIndictatorForUS)
+    }
+    
+    func countingCharacters() {
+        // You can count how many characters are present in a string
+        let someAnimals = "Cat, Dog, Polar Bear, Tiger, Lion, Lemur"
+        print("someAnimals has \(someAnimals.count) characters")
+        
+        // Note that the count won't always count every character. For example if you concatenate a string or modify it using extended grapheme clusters, it will only count the original number of characters of the string.
+        var someWord = "House"
+        print("the number of characters in \(someWord) is \(someWord.count)")
+        
+        someWord += "\u{301}"
+        
+        // It will still print as 5 as the new character added is both an extended graphene cluster and modified the string so the .count is only counting the original version of the string which is House.
+        print("the number of characters in \(someWord) is \(someWord.count)")
+    }
+    
+    // Accesing and modifying a string
+    func stringIndices() {
+        
+    }
+    
+    func insertingAndRemoving() {
+        
+    }
+    
+    func substrings() {
+        
+    }
+    
+    // Comparing Strings
+    func stringAndCharacterEquality() {
+        /*
+         There are 3 ways to compare textual values which are of the following:
+         String and Character Equality - Examples in this method but is pretty much comparing a character to a character or string to another string and seeing if they match 1 to 1.
+         Prefix equality which compares the start of a string known as the 'Prefix" to see if it matches
+         Suffic Equality which is the smae as prefix but at the end instead of the beginning
+         */
+        
+        let sameQuoteString = "This will be the same as the next string"
+        let actualQuoteString = "This will be the same as the next string"
+        if sameQuoteString == actualQuoteString {
+            print("These 2 strings are the exact same and thus are equal")
+        }
+        
+        // Strings can even be compared and considered equal when using unicode/grapheme clusters like so:
+        let eAcuteQuote = "Pretend this is some french or spanish text\u{E9}"
+        
+        let combinedEActueQuote = "Pretend this is some french or spanish text\u{65}\u{301}"
+        
+        if eAcuteQuote == combinedEActueQuote {
+            print("These two are considered the same because E9 and 65 + 301 equal the same character of an latin e")
+        }
+    }
+    
+    func prefixAndSuffixEquality() {
+        
+    }
+    
+    // Unicode
+    
+    func unicodeUTF8() {
+        
+    }
+    
+    func unicodeUTF16() {
+        
+    }
+    
+    func unicodeScalar() {
+        
     }
 }

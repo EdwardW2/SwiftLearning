@@ -78,7 +78,13 @@ class StringsAndCharacters {
     }
     
     func extendedStringDelimiters() {
+        // Delimiters are ways of making a string with special characters without invoking their effects
+        // For example if I was to put a # in a string next to a /n the /n will be printed as part of the string without its effect invoked.
         
+        let someText = #"""
+            Some text is here oh and more quote marks: """
+            """#
+        print(someText)
     }
     
     func emptyStringMethod() {

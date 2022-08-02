@@ -3,4 +3,102 @@
    uuid = "56DC1780-5FA1-4C8F-8BA5-2E22AAA02C8D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25394F03-26EA-4572-B9C7-18307B2B4D3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Basics2/IfLetVersusGuardLet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "validateWithIfLet(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "25394F03-26EA-4572-B9C7-18307B2B4D3B - 8e017f062fe8cec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basics2.UserValidation.validateWithIfLet(user: Swift.Optional&lt;Basics2.User&gt;) -&gt; Swift.Bool"
+                  moduleName = "Basics2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edwardwilkins/Documents/SwiftLearning/Basics2/Basics2/IfLetVersusGuardLet.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "117">
+               </Location>
+               <Location
+                  uuid = "25394F03-26EA-4572-B9C7-18307B2B4D3B - 8e017f062fe8cec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basics2.UserValidation.validateWithIfLet(user: Swift.Optional&lt;Basics2.User&gt;) -&gt; Swift.Bool"
+                  moduleName = "Basics2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edwardwilkins/Documents/SwiftLearning/Basics2/Basics2/IfLetVersusGuardLet.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "155">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B56D8DB-9883-44D5-81AC-A181C0F4F223"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Basics2/IfLetVersusGuardLet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "validateWithGuardLet(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B56D8DB-9883-44D5-81AC-A181C0F4F223 - 13df4a3ce922de0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basics2.UserValidation.validateWithGuardLet(user: Swift.Optional&lt;Basics2.User&gt;) -&gt; Swift.Bool"
+                  moduleName = "Basics2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edwardwilkins/Documents/SwiftLearning/Basics2/Basics2/IfLetVersusGuardLet.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "117">
+               </Location>
+               <Location
+                  uuid = "3B56D8DB-9883-44D5-81AC-A181C0F4F223 - 13df4a3ce922de0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Basics2.UserValidation.validateWithGuardLet(user: Swift.Optional&lt;Basics2.User&gt;) -&gt; Swift.Bool"
+                  moduleName = "Basics2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edwardwilkins/Documents/SwiftLearning/Basics2/Basics2/IfLetVersusGuardLet.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "155">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

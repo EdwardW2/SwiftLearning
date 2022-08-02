@@ -218,15 +218,51 @@ class StringsAndCharacters {
     
     // Accesing and modifying a string
     func stringIndices() {
+        // You can get specific characters from strings using index
+        let someWord = "Dog Walk!"
+        // This grabs the start of the index, aka, the start of the string
+        print(someWord[someWord.startIndex])
         
+        // This line grabs the character just before the end of the index
+        print(someWord[someWord.index(before: someWord.endIndex)])
+        
+        // This is the same as the above but after the start of the index
+        print(someWord[someWord.index(after: someWord.startIndex)])
+        
+        // Unlike the others used, this is taking the start of the index and then wanting an offset by 5 so it counts 5 characters ahead and grabs that one.
+        let index = someWord.index(someWord.startIndex, offsetBy: 5)
+        print(someWord[index])
+        
+        // Trying to grab an index outside of the range of the string will cause an runtime error
+        
+        // FInally there is a indices property you can use t access all characters of a string:
+        for index in someWord.indices {
+            print("\(someWord[index]) ", terminator: "")
+        }
     }
     
     func insertingAndRemoving() {
+        // You can insert characters there is a insert(_: at:) function and for inserting strings there is a insert(contentsOf: at:) method
+        var pet = "Doggy"
+        pet.insert("!", at: pet.endIndex)
         
+        pet.insert(contentsOf: " Walk", at: pet.index(before: pet.endIndex))
+        
+        // You can also remove characters and strings:
+        pet.remove(at: pet.index(before: pet.endIndex))
+        
+        let range = pet.index(pet.endIndex, offsetBy: -4)..<pet.endIndex
+        pet.removeSubrange(range)
     }
     
     func substrings() {
+        // Coments to be filled in here
+        let greeting = "Hello, World!"
+        let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+        let beginning = greeting[..<index]
         
+        let newString = String(beginning)
+        print(newString)
     }
     
     // Comparing Strings
@@ -252,10 +288,58 @@ class StringsAndCharacters {
         if eAcuteQuote == combinedEActueQuote {
             print("These two are considered the same because E9 and 65 + 301 equal the same character of an latin e")
         }
+        
+        // However not all comparisons between unicode/grapheme clusters workout as equals, simply because they are all unique and quite often, not the same.
+        // Take 2 A's for example. You have a latin and a Cyrillic A. They may both be A but they are not equal
+        let latinLetterA: Character = "\u{41}"
+        let cryillicLetterA: Character = "\u{0410}"
+        
+        if latinLetterA == cryillicLetterA {
+            print("These 2 characters are equal.")
+        } else {
+            print("These 2 characters are not equal.")
+        }
     }
     
     func prefixAndSuffixEquality() {
+        // Just like the above, you can also use prefixes and suffixes to find equals and compare strings
+        // Below is an example list of strings for Romeo & Juliet
+        let romeoAndJuliet = [
+            "Act 1 Scene 1: Verona, A public place",
+            "Act 1 Scene 2: Capulet's mansion",
+            "Act 1 Scene 3: A room in Capulet's mansion",
+            "Act 1 Scene 4: A street outside Capulet's mansion",
+            "Act 1 Scene 5: The Great Hall in Capulet's mansion",
+            "Act 2 Scene 1: Outside Capulet's mansion",
+            "Act 2 Scene 2: Capulet's orchard",
+            "Act 2 Scene 3: Outside Friar Lawrence's cell",
+            "Act 2 Scene 4: A street in Verona",
+            "Act 2 Scene 5: Capulet's mansion",
+            "Act 2 Scene 6: Friar Lawrence's cell"
+        ]
         
+        // Here is finding/comparing strings with a prefix of Act 1 and then counting how many times Act 1 appears.
+        var countNumberofAct1 = 0
+        for scene in romeoAndJuliet {
+            if scene.hasPrefix("Act 1 ") {
+                countNumberofAct1 += 1
+            }
+        }
+        print("There is \(countNumberofAct1) scenes in Act 1.")
+        
+        // The same can be done with the Suffix
+        var mansionCount = 0
+        var cellCount = 0
+        
+        for scene in romeoAndJuliet {
+            if scene.hasSuffix("Capulet's mansion") {
+                mansionCount += 1
+            } else if scene.hasSuffix("Friar Lawrence's cell") {
+                cellCount += 1
+            }
+        }
+        
+        print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
     }
     
     // Unicode

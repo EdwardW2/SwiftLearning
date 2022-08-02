@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let stringsLessons: StringsAndCharacters = StringsAndCharacters()
+    let userValidation: UserValidation = UserValidation()
     
     let randomConstant = 5
     // Let is to always be used on values you know will never change.
@@ -57,6 +58,7 @@ class ViewController: UIViewController {
         stringsLessons.graphemeClusters()
         stringsLessons.countingCharacters()
         stringsLessons.stringAndCharacterEquality()
+        testUserValidation()
     }
 
     func aHelloFunction() {
@@ -424,6 +426,23 @@ class ViewController: UIViewController {
         } else {
             print("Access Denied")
         }
+    }
+    
+    func testUserValidation() {
+        var userAccount = User()
+        userAccount.firstName = "Edward"
+        userAccount.lastName = "Wilkins"
+        userAccount.email = "edward.wilkins@karhoo.com"
+        
+        let userBrokenAccount = User.init(firstName: "Ed", lastName: "Wilkins", email: "edwardwilkinsakarhoo.ocm")
+        
+        _ = userValidation.validateWithIfLet(user: nil)
+        _ = userValidation.validateWithIfLet(user: userAccount)
+        _ = userValidation.validateWithIfLet(user: userBrokenAccount)
+        
+        _ = userValidation.validateWithGuardLet(user: nil)
+        _ = userValidation.validateWithGuardLet(user: userAccount)
+        _ = userValidation.validateWithGuardLet(user: userBrokenAccount)
     }
 
 }

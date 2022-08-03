@@ -345,14 +345,32 @@ class StringsAndCharacters {
     // Unicode
     
     func unicodeUTF8() {
+        //TODO: Add comments explaining this later
+        let catString = "Cat!!"
         
+        for codeUnit in catString.utf8 {
+            print("\(codeUnit) ", terminator: "")
+        }
     }
     
     func unicodeUTF16() {
+        let catString = "Cat!!"
         
+        for codeUnit in catString.utf16 {
+            print("\(codeUnit) ", terminator: "")
+        }
     }
     
     func unicodeScalar() {
+        let catString = "Cat!!"
         
+        for scalar in catString.unicodeScalars {
+            print("\(scalar.value) ", terminator: "")
+        }
+        print("")
+        
+        for scalar in catString.unicodeScalars {
+            print("\(scalar)")
+        }
     }
 }
